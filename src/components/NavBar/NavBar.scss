@@ -1,0 +1,78 @@
+/* ============================================
+Header
+============================================ */
+/*
+nav {
+    width: 100%;
+
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+    }
+}
+*/
+.top {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+.bottom {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: transparent;
+    // color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 90px;
+
+    a{
+        color: $body-color;
+        text-decoration: none;
+    }
+}
+
+ul.icons {
+    font-size: 1.2rem;
+}
+
+.navbar .megamenu{ padding: 1rem; }
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+
+    .navbar .has-megamenu{position:static!important;}
+    .navbar .megamenu{
+        left:0; right:0; width:100%; margin-top:0;
+        border: none;
+        border-radius: 0;
+    }
+
+}	
+/* ============ desktop view .end// ============ */
+
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+    .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+    overflow-y: auto;
+        max-height: 90vh;
+        margin-top:10px;
+    }
+}
+
+
+.dropdown-toggle::after {
+    vertical-align: 0.1em;
+}
