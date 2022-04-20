@@ -12,4 +12,7 @@ Hero
 main.hero {
     background-image: url(../../public/img/hero-img-bg.jpg);
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
