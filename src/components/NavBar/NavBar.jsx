@@ -1,5 +1,5 @@
 import React from "react";
-
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
     return (
@@ -17,7 +17,9 @@ const NavBar = () => {
                     <ul className="icons">
                         <li className="px-1"><a href="#"></a><i className="las la-search la-rotate-270"></i></li>
                         <li className="px-1"><a href="#"></a><i className="las la-user"></i></li>
-                        <li className="px-1"><a href="#"></a><i className="las la-shopping-bag"></i></li>
+                        <li className="px-1"><a href="#"></a>
+                            <CartWidget />
+                        </li>
                     </ul>
                 </div> {/* Top menu ends */}  
                 

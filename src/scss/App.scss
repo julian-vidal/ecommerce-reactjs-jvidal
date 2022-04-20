@@ -4,56 +4,7 @@
 
 
 @import "../components/NavBar/NavBar";
-
-/* ============================================
-Header
-============================================ */
-/*
-nav {
-    width: 100%;
-
-    ul {
-        display: flex;
-        list-style: none;
-        justify-content: space-around;
-    }
-}
-
-.top {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    ul {
-        display: flex;
-        list-style: none;
-        padding-left: 0;
-    }
-}
-
-.bottom {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-header {
-    background-color: transparent;
-    // color: #fff;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    min-height: 90px;
-
-    a{
-        color: $body-color;
-        text-decoration: none;
-    }
-}
-
-ul.icons {
-    font-size: 1.2rem;
-}
+@import "../components/CartWidget/CartWidget.scss";
 
 /* ============================================
 Hero
