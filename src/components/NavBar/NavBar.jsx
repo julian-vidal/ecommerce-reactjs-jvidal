@@ -26,14 +26,14 @@ const NavBar = () => {
                 <div className="bottom py-0">
                     <nav className="navbar navbar-expand-lg navbar-light">
                         <div className="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
+                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
                             </button>
                             <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                                 <ul className="navbar-nav justify-content-center">
                                     <li className="nav-item"><a href="#" className="nav-link active">Home</a></li>
 
-                                    <li className="dropdown nav-item has-megamenu">
+                                    <ul className="dropdown nav-item has-megamenu">
                                         <a href="#" className="dropdown-toggle nav-link" role="button" id="menDropdown" data-bs-toggle="dropdown" aria-expanded="false">Men</a>
                                         <div className="dropdown-menu megamenu container shadow">
                                             <div className="row">
@@ -55,9 +55,9 @@ const NavBar = () => {
                                                 </div>
                                             </div> {/* row ends */}
                                         </div> {/* dropdown-menu ends */}
-                                    </li> {/* Men sub menu ends */}
+                                    </ul> {/* Men sub menu ends */}
 
-                                    <li className="dropdown nav-item has-megamenu">
+                                    <ul className="dropdown nav-item has-megamenu">
                                         <a href="#" className="dropdown-toggle nav-link" role="button" id="womenDropdown" data-bs-toggle="dropdown" aria-expanded="false">Women</a>
                                         <div className="dropdown-menu megamenu container shadow">
                                             <div className="row">
@@ -79,7 +79,7 @@ const NavBar = () => {
                                                 </div>
                                             </div> {/* row ends */}
                                         </div> {/* dropdown-menu ends */}
-                                    </li> {/* Women sub menu ends */}
+                                    </ul> {/* Women sub menu ends */}
                                         
                                     <li className="nav-item"><a href="#" className="nav-link">Kids</a></li>
                                     <li className="nav-item"><a href="#" className="nav-link">Sale</a></li>

@@ -1,0 +1,29 @@
+.qtyContainer {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    a {
+        cursor: pointer;
+    }
+
+
+}
+
+.qtyField {
+    max-width: 90px;
+    background-color: #fff;
+    border: 1px solid $gray-100;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+    input {
+        border: none;
+        max-width: 30px;
+        text-align: center;
+    }
+}
+
