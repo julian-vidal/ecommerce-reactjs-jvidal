@@ -6,6 +6,8 @@
 @import "../components/NavBar/NavBar";
 @import "../components/CartWidget/CartWidget.scss";
 @import "../components/Itemcount/ItemCount.scss";
+@import "../components/Item/Items.scss";
+
 // @import "../../node_modules/sweet-alert/sweet-alert.css.js";
 
 /* ============================================
@@ -13,9 +15,10 @@ Hero
 ============================================ */
 main.hero {
     background-image: url(../../public/img/hero-img-bg.jpg);
-    min-height: 100vh;
+    // min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-top: 200px;
 }

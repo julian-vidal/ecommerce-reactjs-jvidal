@@ -13,8 +13,11 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <main className='hero'>
-        <ItemListContainer greeting="Hello, it's me!" />
+      <main className='hero pb-5'>
+        <div className='container'>
+          <ItemListContainer greeting="Hello, it's me!" />
+        </div>
+        
       </main> 
       
     </div>

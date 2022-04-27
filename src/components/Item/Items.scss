@@ -1,0 +1,32 @@
+
+@include media-breakpoint-up(lg){
+    .productItem {
+        width: 25%;
+    }
+}
+
+
+.productItem {
+
+    transition: .3s;
+    cursor: pointer;
+
+
+
+    i.la-shopping-cart {
+        background-color: #fff;
+        border-radius: 100%;
+        padding: 1rem;
+        width: fit-content;
+        position: absolute;
+        bottom: 23%;
+        left: 38%;
+        display: none;
+        transition: .3s;
+    }
+
+    &:hover i.la-shopping-cart {
+        display: block;
+    }
+}
+
