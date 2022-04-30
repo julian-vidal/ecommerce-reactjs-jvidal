@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import ItemCount from '../Itemcount/ItemCount';
+import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
 
 const getProducts = () => {
@@ -36,26 +35,18 @@ const getProducts = () => {
 
 const ItemListContainer = (props) => {
 
-  function cartMessage() {
-    console.log("Product added to the cart");
-  }
-
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     getProducts()
       .then(res => {
         setProducts(res);
-        console.log(`setProducts es de tipo ${typeof setProducts}`);
-        console.log(`useState es de tipo ${typeof useState}`);
       })
   }, []);
 
   return (
     <div className='itemListContainer'>
         <h3>{ props.greeting}</h3>
-        <ItemCount stock={5} initial={1} onAdd={cartMessage} />
-
         <ItemList items={products}/>
     </div>
   )

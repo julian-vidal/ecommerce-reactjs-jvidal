@@ -13,7 +13,7 @@
 /* ============================================
 Hero
 ============================================ */
-main.hero {
+.hero {
     background-image: url(../../public/img/hero-img-bg.jpg);
     // min-height: 100vh;
     display: flex;
@@ -21,4 +21,8 @@ main.hero {
     justify-content: center;
     flex-direction: column;
     padding-top: 200px;
+}
+
+.btn {
+    text-transform: uppercase;
 }

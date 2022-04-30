@@ -2,7 +2,7 @@
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     
 
     a {
@@ -15,7 +15,7 @@
 .qtyField {
     max-width: 90px;
     background-color: #fff;
-    border: 1px solid $gray-100;
+    border: 1px solid $gray-400;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
