@@ -1,12 +1,61 @@
-# Getting Started with Create React App
+# Ecommerce store
+This is a responsive ecommerce store built with React JS built by Julian Vidal. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The libraries used in this project are:
+- [Create React App](https://github.com/facebook/create-react-app) - Starter project to create React JS apps
+- [Line Awesome Icons](https://icons8.com/line-awesome) - Open source icon library
+- [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) - Frontend framework
+- [React Router DOM](https://v5.reactrouter.com/web/guides/quick-start) - It's used to manage the navigation of the app
 
-## Available Scripts
+## Features
+
+### Components
+
+#### CartWidget
+It's the shopping cart included in the header. Currently it does'nt have any functionality but future versions will count hpw many products have been added to the cart.
+
+### Item
+This component is a [Bootstrap card element](https://getbootstrap.com/docs/5.0/components/card/) that contains the product name, image, and price. It links to the page that contains more details of the product.
+
+### ItemCount
+It's the "Add to Cart" component that contains a field to set the number of items to be added to the cart and the add to cart button. It checks how many units of a product are in stock and allows to add to the cart a number of products between the initial (minimum) quantity and the available stock. 
+
+Currently, the *add to cart* button only logs a message in the console, but future verisions will include the actual *add to cart feature*.
+
+
+### ItemDetail
+This component displays the product details: name, image, description, price, and imports the `ItemCount` component. Also, it displays the Facebook and Whatsapp icons to share the current link on those platforms and bellow that, the message "Guaranteed safe checkout" along with some credit card logos.
+
+### ItemList
+It's a [card group Bootstrap element](https://getbootstrap.com/docs/5.0/components/card/#card-groups) that imports the `Item` component to display the products that match the criteria of the requested page.
+
+### Navbar
+It's the header of the website, it includes:
+- Social media icons
+- Logo
+- Main menu
+- Search icon
+- Account Icon
+- It imports the `CartWidget` component
+
+## Pages
+### ItemDetailContainer
+This component imports the `ItemDetail` component. It receives the product id parameter and displays the detail of the product associated to that product. This is the page linked when a visitor clicks an `Item` component. This component is reloaded when the `id` param is updated.
+
+### ItemListContainer
+This component imports the `ItemList` component to display a list of all products in the home page or the products of a specific category when visiting a product category page. This component is reloaded when the `categoryId` param is updated.
+
+---
+
+## Instructions provided by the Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Below are the instructions provided by the library.
+
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,12 +63,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +78,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
@@ -39,32 +88,32 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+#### Code Splitting
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+#### Analyzing the Bundle Size
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+#### Making a Progressive Web App
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+#### Advanced Configuration
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+#### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+#### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
