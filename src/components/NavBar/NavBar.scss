@@ -39,6 +39,11 @@ ul.icons {
 
 .navbar .megamenu{ padding: 1rem; }
 
+
+ul.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
 

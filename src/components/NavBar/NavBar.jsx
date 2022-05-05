@@ -1,5 +1,6 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -12,7 +13,7 @@ const NavBar = () => {
                         <li className="px-1"><a href="#"></a><i className="lab la-whatsapp"></i></li>
                     </ul>
 
-                    <img src="./img/logo.png" alt="Logo" />
+                    <Link to="/"> <img src="https://julianvidal-dev.com/ecommerce-react/logo.png" alt="Logo" /> </Link>
 
                     <ul className="icons">
                         <li className="px-1"><a href="#"></a><i className="las la-search la-rotate-270"></i></li>
@@ -31,10 +32,10 @@ const NavBar = () => {
                             </button>
                             <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                                 <ul className="navbar-nav justify-content-center">
-                                    <li className="nav-item"><a href="#" className="nav-link active">Home</a></li>
+                                    <li className="nav-item"><Link to="/" className="nav-link active">Home</Link></li>
 
                                     <ul className="dropdown nav-item has-megamenu">
-                                        <a href="#" className="dropdown-toggle nav-link" role="button" id="menDropdown" data-bs-toggle="dropdown" aria-expanded="false">Men</a>
+                                        <NavLink to="/category/men" className="dropdown-toggle nav-link" id="menDropdown"  aria-expanded="false">Men</NavLink>
                                         <div className="dropdown-menu megamenu container shadow">
                                             <div className="row">
                                                 <div className="col-3">
@@ -58,7 +59,7 @@ const NavBar = () => {
                                     </ul> {/* Men sub menu ends */}
 
                                     <ul className="dropdown nav-item has-megamenu">
-                                        <a href="#" className="dropdown-toggle nav-link" role="button" id="womenDropdown" data-bs-toggle="dropdown" aria-expanded="false">Women</a>
+                                        <NavLink to="/category/women" className="dropdown-toggle nav-link">Women</NavLink>
                                         <div className="dropdown-menu megamenu container shadow">
                                             <div className="row">
                                                 <div className="col-3">
@@ -81,8 +82,10 @@ const NavBar = () => {
                                         </div> {/* dropdown-menu ends */}
                                     </ul> {/* Women sub menu ends */}
                                         
-                                    <li className="nav-item"><a href="#" className="nav-link">Kids</a></li>
-                                    <li className="nav-item"><a href="#" className="nav-link">Sale</a></li>
+                                    <li className="nav-item">
+                                        <NavLink to="/category/kids" className="nav-link">Kids</NavLink>
+                                    </li>
+                                    {/* <li className="nav-item"><a href="#" className="nav-link">Sale</a></li> */}
                                 </ul>
 
                             </div>

@@ -1,0 +1,11 @@
+@include media-breakpoint-up(lg){
+    .itemDetail {
+        margin-top: 200px;
+    }
+}
+
+.itemDetail {
+    img {
+        background-color: #f6f6f6;
+    }
+}

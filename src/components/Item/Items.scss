@@ -1,6 +1,6 @@
 
 @include media-breakpoint-up(lg){
-    .productItem {
+    .w25-desktop {
         width: 25%;
     }
 }
@@ -28,5 +28,14 @@
     &:hover i.la-shopping-cart {
         display: block;
     }
+
+    img {
+        background-color: #F6F6F6;
+    }
 }
 
+
+.w25-desktop {
+    color: $black;
+    text-decoration: none;
+}
