@@ -11,7 +11,8 @@ const getProducts = (category) => {
         price: 100,
         imageUrl: "https://julianvidal-dev.com/ecommerce-react/products/crew-neck-sweater/front.webp",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        category: "women"
+        category: "women",
+        stock: 5
       },
       {
         id: 2,
@@ -19,7 +20,8 @@ const getProducts = (category) => {
         price: 80,
         imageUrl: "https://julianvidal-dev.com/ecommerce-react/products/long-sleeve-t-shirts/blue-sleeve.webp",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        category: "men"
+        category: "men",
+        stock: 7
       },
       {
         id: 3,
@@ -27,7 +29,8 @@ const getProducts = (category) => {
         price: 79,
         imageUrl: "https://julianvidal-dev.com/ecommerce-react/products/cocodrile-t-shirt2.png",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        category: "kids"
+        category: "kids",
+        stock: 20
       }
     ];
 

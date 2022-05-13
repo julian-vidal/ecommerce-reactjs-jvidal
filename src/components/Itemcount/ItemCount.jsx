@@ -44,7 +44,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             </div>  
             
             
-            <button onClick={() => onAdd(qty)} className="btn btn-dark my-3">Add to cart</button>
+            <button onClick={() => (qty <= stock) && onAdd(qty)} className="btn btn-dark my-3">Add to cart</button>
         </div>
   )
 }

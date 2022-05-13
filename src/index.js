@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import 'line-awesome/dist/line-awesome/css/line-awesome.min.css';
 import { BrowserRouter } from 'react-router-dom';
+import {CartContextProvider} from './store/CartContext';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <CartContextProvider>
+        <App />
+      </CartContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

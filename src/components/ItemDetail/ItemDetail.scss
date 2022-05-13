@@ -9,3 +9,16 @@
         background-color: #f6f6f6;
     }
 }
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.custom-tooltip{
+    border-bottom: 1px dotted $gray-400;
+}
+
+.helper-buttons button {
+    width: 45%;
+}
