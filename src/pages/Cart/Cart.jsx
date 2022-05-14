@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import CartContext from '../../store/CartContext';
+import CartSummary from './CartSummary';
+import EmptyCart from './EmptyCart';
 
 const Cart = () => {
+
+  const cartCtx = useContext(CartContext);
+
   return (
     <section className='cart-page container'>
-        <div className="row">
-            <h1 className='text-center'>This is the cart!</h1>
-        </div>
+      
+      {cartCtx.getCartQuantity() ? <CartSummary /> : <EmptyCart/> }
         
     </section>
   )
