@@ -41,8 +41,10 @@ const CartSummary = () => {
         </div>
 
         <div className="row d-flex justify-content-between">
-          <Link to="/" className='text-reset d-inline-block w-auto'><i className="las la-angle-left"></i>Continue Shopping</Link>
+          <Link to="/" className='text-reset d-inline-block w-auto me-auto'><i className="las la-angle-left"></i>Continue Shopping</Link>
+          <Link to="/cart" className='btn btn-outline-dark w-auto me-3' onClick={() => cartCtx.clear()}>Empty Cart</Link>
           <Link to="/checkout" className="btn btn-dark d-inline-block w-auto">Proceed to checkout</Link>
+          
         </div>
     </>
   )

@@ -16,13 +16,16 @@ export const CartContextProvider = ({children}) => {
     const [productList, setProductList] = useState([]);
 
     const addProduct = product => {
-        const repeatedItemIndex = productList.findIndex(item => item.id === product.id);
+        // if (product.quantity < product.stock) {
+            const repeatedItemIndex = productList.findIndex(item => item.id === product.id);
 
-        if (repeatedItemIndex !== -1) {
-            setProductList(productList.map(item => item.id === product.id ? {...item, quantity: item.quantity + product.quantity}: item));
-        } else {
-            setProductList([product,...productList]);
-        }
+            if (repeatedItemIndex !== -1) {
+                setProductList(productList.map(item => item.id === product.id ? {...item, quantity: item.quantity + product.quantity}: item));
+            } else {
+                setProductList([product,...productList]);
+            }
+        // }
+        
     }
 
     const addOneProduct = product => {

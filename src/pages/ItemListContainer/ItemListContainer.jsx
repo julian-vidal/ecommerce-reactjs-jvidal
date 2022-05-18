@@ -2,49 +2,65 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList/ItemList';
 
-const getProducts = (category) => {
-  const myPromise = new Promise((resolve,reject) => {
-    const productList = [
-      {
-        id: 1,
-        title: "Crew Neck Sweater",
-        price: 100,
-        imageUrl: "https://julianvidal-dev.com/ecommerce-react/products/crew-neck-sweater/front.webp",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        category: "women",
-        stock: 5
-      },
-      {
-        id: 2,
-        title: "Long Sleeve T-Shirt",
-        price: 80,
-        imageUrl: "https://julianvidal-dev.com/ecommerce-react/products/long-sleeve-t-shirts/blue-sleeve.webp",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        category: "men",
-        stock: 7
-      },
-      {
-        id: 3,
-        title: "Cocodrile T-Shirt",
-        price: 79,
-        imageUrl: "https://julianvidal-dev.com/ecommerce-react/products/cocodrile-t-shirt2.png",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        category: "kids",
-        stock: 20
-      }
-    ];
+import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore';
 
-    const productsFiltered = category ? productList.filter(product => product.category === category) : productList;
+// const getProducts = (category) => {
+//   const myPromise = new Promise((resolve,reject) => {
+//     const productList = [
+//       {
+//         id: 1,
+//         title: "Crew Neck Sweater",
+//         price: 100,
+//         imageUrl: "https://julianvidal-dev.com/ecommerce-react/products/crew-neck-sweater/front.webp",
+//         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+//         category: "women",
+//         stock: 5
+//       },
+//       {
+//         id: 2,
+//         title: "Long Sleeve T-Shirt",
+//         price: 80,
+//         imageUrl: "https://julianvidal-dev.com/ecommerce-react/products/long-sleeve-t-shirts/blue-sleeve.webp",
+//         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+//         category: "men",
+//         stock: 7
+//       },
+//       {
+//         id: 3,
+//         title: "Cocodrile T-Shirt",
+//         price: 79,
+//         imageUrl: "https://julianvidal-dev.com/ecommerce-react/products/cocodrile-t-shirt2.png",
+//         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+//         category: "kids",
+//         stock: 20
+//       }
+//     ];
+
+//     const productsFiltered = category ? productList.filter(product => product.category === category) : productList;
     
 
-    setTimeout(() => {
-      resolve(productsFiltered)
-    }, 2000)
-  });
+//     setTimeout(() => {
+//       resolve(productsFiltered)
+//     }, 2000)
+//   });
 
-  return myPromise;
+//   return myPromise;
+// }
+
+
+const getProducts = categoryId => {
+    const db = getFirestore();
+
+    const itemsCollection = collection(db, 'items');
+
+    const myQuery = categoryId && query(
+      itemsCollection,
+      where("category", "==", categoryId)
+    )
+
+    return getDocs(myQuery || itemsCollection);
+    // return getDocs(itemsCollection)
 }
-
 
 const ItemListContainer = (props) => {
 
@@ -53,14 +69,27 @@ const ItemListContainer = (props) => {
   const heading = categoryId ? categoryId : "Hello World";
 
   useEffect(() => {
+    
+
     getProducts(categoryId)
-      .then(res => {
-        setProducts(res);
+      .then(snapshot => {
+        console.log(snapshot.docs[0].data())
+        setProducts(snapshot.docs.map(doc => {
+          return {...doc.data(), id:doc.id}
+        }))
+        // setProducts(snapshot.docs.map(doc => {return {...doc.data(), id:doc.id}}));
       })
-      .catch (err => {
-        console.log(err);
-        alert('Ocurrió un error, revisa la consola para mas detalles');
-      });
+      .catch(
+        err => console.log(err)
+      );
+    // getProducts(categoryId)
+    //   .then(res => {
+    //     setProducts(res);
+    //   })
+    //   .catch (err => {
+    //     console.log(err);
+    //     alert('Ocurrió un error, revisa la consola para mas detalles');
+    //   });
   }, [categoryId]);
 
   return (

@@ -45,7 +45,7 @@ const ItemDetail = ( {item} ) => {
                             </Link> 
                     }
                     
-                    <span className='mb-3 custom-tooltip' data-bs-toggle="tooltip" data-bs-original-title="Check the console for more details" title data-bs-placement="right">Helper buttons <i className="las la-info-circle"></i></span>
+                    {/* <span className='mb-3 custom-tooltip' data-bs-toggle="tooltip" data-bs-original-title="Check the console for more details" title data-bs-placement="right">Helper buttons <i className="las la-info-circle"></i></span>
 
                     <div className="d-flex flex-wrap gap-1 helper-buttons mt-3">
                         
@@ -54,7 +54,7 @@ const ItemDetail = ( {item} ) => {
                         <div className="break"></div>
                         <button onClick={() => cartCtx.clear()} className='btn btn-outline-dark btn-sm flex-grow-1'>Empty cart</button>
                         <button onClick={() => console.log(cartCtx.isInCart(item.id))} className='btn btn-outline-dark btn-sm flex-grow-1'>Is In Cart?</button>
-                    </div>
+                    </div> */}
 
                     
                     
