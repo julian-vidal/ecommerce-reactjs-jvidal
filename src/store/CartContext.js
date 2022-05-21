@@ -9,11 +9,15 @@ const CartContext = createContext({
     getCartQuantity: () => {},
     removeAllUnits: () => {},
     addOneProduct: () => {},
-    getCartTotal: () => {}
+    getCartTotal: () => {},
+    setShowHeader: () => {},
+    orderId: "",
+    setOrderId: () => {},
 })
 
 export const CartContextProvider = ({children}) => {
     const [productList, setProductList] = useState([]);
+    const [orderId, setOrderId] = useState("");
 
     const addProduct = product => {
         // if (product.quantity < product.stock) {
@@ -64,9 +68,11 @@ export const CartContextProvider = ({children}) => {
 
     const getCartTotal = () => {
         return productList.reduce((total, product) => {
-            return total + (product.quantity * product.price)
+            return (total + (product.quantity * product.price))
         },0)
     }
+
+    const [showHeader, setShowHeader] = useState(true)
 
     return (
         <CartContext.Provider value={{
@@ -79,10 +85,16 @@ export const CartContextProvider = ({children}) => {
             removeAllUnits,
             addOneProduct,
             getCartTotal,
+            showHeader,
+            setShowHeader,
+            orderId,
+            setOrderId
         }}>
             {children}
         </CartContext.Provider>
     )
 }
+
+
 
 export default CartContext;

@@ -30,7 +30,7 @@ const ItemInCart = ({item}) => {
             </div>
             
         </td>
-        <td className="align-middle">${item.quantity * item.price}</td>
+        <td className="align-middle">${(item.quantity * item.price).toLocaleString()}</td>
     </tr>
   )
 }

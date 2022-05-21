@@ -8,13 +8,22 @@ import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer
 import { Routes, Route } from 'react-router-dom';
 import Cart from './pages/Cart/Cart';
 import Checkout from './pages/Checkout/Checkout';
-// import ItemDetail from './components/ItemDetail/ItemDetail';
+import { useContext } from 'react';
+import CartContext from './store/CartContext';
+import ThankYou from './pages/ThankYou/ThankYou'
 
 function App() {
+
+  const cartCtx = useContext(CartContext);
+
   return (
     
     <div className="App">
-      <NavBar />
+      {
+        cartCtx.showHeader ? <NavBar /> : ""
+      }
+      
+
       <main >
         <Routes>
           <Route path='/' element={<ItemListContainer />} />
@@ -22,6 +31,7 @@ function App() {
           <Route path='/item/:id' element={<ItemDetailContainer />}/>
           <Route path='/cart' element={<Cart />} />
           <Route path='/checkout' element={<Checkout />}/>
+          <Route path='/thank-you' element={<ThankYou />} />
         </Routes>
       </main> 
       

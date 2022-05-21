@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const CartSummary = () => {
     const cartCtx = useContext(CartContext);
+    const cartTotal = cartCtx.getCartTotal();
 
   return (
     <>
@@ -33,7 +34,7 @@ const CartSummary = () => {
               <tr>
                 <td colspan="4"><b>Total</b></td>
                 <td>
-                  <b>${cartCtx.getCartTotal()}</b>
+                  <b>${cartTotal.toLocaleString('en')}</b>
                 </td>
               </tr>
             </tfoot>

@@ -19,12 +19,6 @@ const ItemDetail = ( {item} ) => {
        return (cartCtx.getCartQuantity() === 1 ? "Item" : "Items");
     }
 
-    // This is needed for the tooltip
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-
     return (
         <div className="container itemDetail mb-5">
             <div className="row ">
@@ -44,19 +38,6 @@ const ItemDetail = ( {item} ) => {
                                 <button className='btn btn-dark w-100 my-3'> Checkout now ({cartCtx.getCartQuantity()} {showItem()})</button>
                             </Link> 
                     }
-                    
-                    {/* <span className='mb-3 custom-tooltip' data-bs-toggle="tooltip" data-bs-original-title="Check the console for more details" title data-bs-placement="right">Helper buttons <i className="las la-info-circle"></i></span>
-
-                    <div className="d-flex flex-wrap gap-1 helper-buttons mt-3">
-                        
-                        <button onClick={() => console.log(cartCtx.products )} className='btn btn-outline-dark btn-sm flex-grow-1'>Show cart</button>
-                        <button onClick={() => cartCtx.removeProduct(item.id) } className='btn btn-outline-dark btn-sm flex-grow-1' >Remove Product</button>
-                        <div className="break"></div>
-                        <button onClick={() => cartCtx.clear()} className='btn btn-outline-dark btn-sm flex-grow-1'>Empty cart</button>
-                        <button onClick={() => console.log(cartCtx.isInCart(item.id))} className='btn btn-outline-dark btn-sm flex-grow-1'>Is In Cart?</button>
-                    </div> */}
-
-                    
                     
                     <div className="d-flex align-items-center mt-3">
                         Share: <i className="lab la-facebook-f"></i> <i className="lab la-whatsapp"></i> 

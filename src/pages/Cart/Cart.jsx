@@ -6,9 +6,11 @@ import EmptyCart from './EmptyCart';
 const Cart = () => {
 
   const cartCtx = useContext(CartContext);
+  cartCtx.setShowHeader(true)
+  
 
   return (
-    <section className='cart-page container'>
+    <section className='container mt-200'>
       
       {cartCtx.getCartQuantity() ? <CartSummary /> : <EmptyCart/> }
         

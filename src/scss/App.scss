@@ -8,10 +8,7 @@
 @import "../components/Itemcount/ItemCount.scss";
 @import "../components/Item/Items.scss";
 @import "../components/ItemDetail/ItemDetail.scss";
-@import "../pages/Cart/Cart.scss";
-
 @import "../components/ItemInCart/ItemInCart.scss";
-@import "../pages/Checkout/Checkout.scss";
 
 
 // @import "../../node_modules/sweet-alert/sweet-alert.css.js";
@@ -37,4 +34,17 @@ Hero
     h3 {
         text-transform: capitalize;
     }
+}
+
+
+
+/* ============================================
+Utilities
+============================================ */
+.mt-200 {
+    margin-top: 200px;
+}
+
+.w-65px {
+    width: 65px;
 }
