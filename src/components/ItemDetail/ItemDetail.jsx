@@ -1,10 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import securePayment from '../../img/secure-site.jpg'; 
 import CartContext from '../../store/CartContext';
 import ItemCount from '../Itemcount/ItemCount';
-
-import bootstrap from 'bootstrap/dist/js/bootstrap.bundle';
 
 
 const ItemDetail = ( {item} ) => {
@@ -43,7 +40,7 @@ const ItemDetail = ( {item} ) => {
                         Share: <i className="lab la-facebook-f"></i> <i className="lab la-whatsapp"></i> 
                     </div>
                     <p className='mt-4 mb-0 text-muted text-uppercase'>Guaranteed safe checkout</p>
-                    <img src={securePayment} alt="Secure site" className='w-50' /> 
+                    <img src="https://julianvidal-dev.com/ecommerce-react/secure-site.jpg" alt="Secure site" className='w-50' /> 
                 </div>
             </div> 
         </div>
