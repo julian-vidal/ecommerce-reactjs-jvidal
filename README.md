@@ -7,6 +7,8 @@ The libraries used in this project are:
 - [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) - Frontend framework
 - [React Router DOM](https://v5.reactrouter.com/web/guides/quick-start) - It's used to manage the navigation of the app
 
+![Demo](ReactDemo.gif)
+
 ## Features
 
 ### Components
