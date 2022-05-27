@@ -15,7 +15,7 @@ const CartSummary = () => {
         </div>
 
         <div className="row">
-          <table class="table">
+          <table className="table">
             <thead className='table-light'>
               <tr>
                 <th scope="col"></th>
@@ -32,7 +32,7 @@ const CartSummary = () => {
             </tbody>
             <tfoot className='table-light border-top-0'>
               <tr>
-                <td colspan="4"><b>Total</b></td>
+                <td colSpan="4"><b>Total</b></td>
                 <td>
                   <b>${cartTotal.toLocaleString('en')}</b>
                 </td>

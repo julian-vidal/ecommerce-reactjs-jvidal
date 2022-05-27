@@ -18,15 +18,16 @@ const ItemDetailContainer = () => {
     const [load, setLoad] = useState(true);
     const {id} = useParams();
     const cartCtx = useContext(CartContext);
-    cartCtx.setShowHeader(true);
+    
 
     useEffect(() => {
+      cartCtx.setShowHeader(true);
         getItemDetails(id)
             .then(snapshot => {
                 setItemDetails({...snapshot.data(), id: snapshot.id })
                 setLoad(false)
             })
-    } , [id]);
+    } , [id, cartCtx]);
 
   return (
     <>

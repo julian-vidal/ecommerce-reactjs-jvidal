@@ -6,8 +6,6 @@ const CartWidget = () => {
   
   const cartCtx = useContext(CartContext);
 
-  // cartCtx.getCartQuantity()) ? "Hola" : "Hello";
-
   return (
     <>
     {cartCtx.getCartQuantity() ?

@@ -20,7 +20,6 @@ export const CartContextProvider = ({children}) => {
     const [orderId, setOrderId] = useState("");
 
     const addProduct = product => {
-        // if (product.quantity < product.stock) {
             const repeatedItemIndex = productList.findIndex(item => item.id === product.id);
 
             if (repeatedItemIndex !== -1) {
@@ -28,7 +27,7 @@ export const CartContextProvider = ({children}) => {
             } else {
                 setProductList([product,...productList]);
             }
-        // }
+        
         
     }
 

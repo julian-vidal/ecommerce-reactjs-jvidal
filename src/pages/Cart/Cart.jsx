@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import CartContext from '../../store/CartContext';
 import CartSummary from './CartSummary';
 import EmptyCart from './EmptyCart';
@@ -6,7 +6,11 @@ import EmptyCart from './EmptyCart';
 const Cart = () => {
 
   const cartCtx = useContext(CartContext);
-  cartCtx.setShowHeader(true)
+
+  useEffect(() => {
+    cartCtx.setShowHeader(true)
+  }, [cartCtx])
+  
   
 
   return (

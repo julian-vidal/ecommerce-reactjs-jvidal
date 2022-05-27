@@ -8,17 +8,17 @@ const NavBar = () => {
             <div className="container">
                 <div className="top py-3">
                     <ul className="icons">
-                        <li className="px-1"><a href="#"></a><i className="lab la-facebook-f"></i></li>
-                        <li className="px-1"><a href="#"></a><i className="lab la-instagram"></i></li>
-                        <li className="px-1"><a href="#"></a><i className="lab la-whatsapp"></i></li>
+                        <li className="px-1"><Link to="#"><i className="lab la-facebook-f"></i></Link></li>
+                        <li className="px-1"><Link to="#"><i className="lab la-instagram"></i></Link></li>
+                        <li className="px-1"><Link to="#"><i className="lab la-whatsapp"></i></Link></li>
                     </ul>
 
                     <Link to="/"> <img src="https://julianvidal-dev.com/ecommerce-react/logo.png" alt="Logo" /> </Link>
 
                     <ul className="icons">
-                        <li className="px-1"><a href="#"></a><i className="las la-search la-rotate-270"></i></li>
-                        <li className="px-1"><a href="#"></a><i className="las la-user"></i></li>
-                        <li className="px-1"><a href="#"></a>
+                        <li className="px-1"><Link to="#"><i className="las la-search la-rotate-270"></i></Link></li>
+                        <li className="px-1"><Link to="#"><i className="las la-user"></i></Link></li>
+                        <li className="px-1">
                             <CartWidget />
                         </li>
                     </ul>
@@ -40,16 +40,16 @@ const NavBar = () => {
                                             <div className="row">
                                                 <div className="col-3">
                                                     <h6 className="dropdown-header px-0">Top Garments</h6>
-                                                    <li className="nav-item"><a href="#">Shirts</a></li>
-                                                    <li className="nav-item"><a href="#">Jackets</a></li>
-                                                    <li className="nav-item"><a href="">T-shirts</a></li>
-                                                    <li className="nav-item"><a href="">Hoodies</a></li>
+                                                    <li className="nav-item"><Link to="#">Shirts</Link></li>
+                                                    <li className="nav-item"><Link to="#">Jackets</Link></li>
+                                                    <li className="nav-item"><Link to="">T-shirts</Link></li>
+                                                    <li className="nav-item"><Link to="">Hoodies</Link></li>
                                                 </div> {/* Top Garments ends */}
                                                 <div className="col-3 px-0">
                                                     <h6 className="dropdown-header px-0">Bottom Garments</h6>
-                                                    <li className="nav-item"><a href="#">Jeans</a></li>
-                                                    <li className="nav-item"><a href="#">Pants</a></li>
-                                                    <li className="nav-item"><a href="#">Shorts</a></li>
+                                                    <li className="nav-item"><Link to="#">Jeans</Link></li>
+                                                    <li className="nav-item"><Link to="#">Pants</Link></li>
+                                                    <li className="nav-item"><Link to="#">Shorts</Link></li>
                                                 </div> {/* Bottom Garments ends */}
                                                 <div className="col-6">
                                                     <img src="https://via.placeholder.com/380x300" alt="" className="img-fluid"/>
@@ -64,16 +64,16 @@ const NavBar = () => {
                                             <div className="row">
                                                 <div className="col-3">
                                                     <h6 className="dropdown-header px-0">Top Garments</h6>
-                                                    <li className="nav-item"><a href="#">Blouses</a></li>
-                                                    <li className="nav-item"><a href="#">Jackets</a></li>
-                                                    <li className="nav-item"><a href="">T-shirts</a></li>
-                                                    <li className="nav-item"><a href="">Hoodies</a></li>
+                                                    <li className="nav-item"><Link to="#">Blouses</Link></li>
+                                                    <li className="nav-item"><Link to="#">Jackets</Link></li>
+                                                    <li className="nav-item"><Link to="">T-shirts</Link></li>
+                                                    <li className="nav-item"><Link to="">Hoodies</Link></li>
                                                 </div>
                                                 <div className="col-3 px-0">
                                                     <h6 className="dropdown-header px-0">Bottom Garments</h6>
-                                                    <li className="nav-item"><a href="#">Jeans</a></li>
-                                                    <li className="nav-item"><a href="#">Pants</a></li>
-                                                    <li className="nav-item"><a href="#">Skirts</a></li>
+                                                    <li className="nav-item"><Link to="#">Jeans</Link></li>
+                                                    <li className="nav-item"><Link to="#">Pants</Link></li>
+                                                    <li className="nav-item"><Link to="#">Skirts</Link></li>
                                                 </div>
                                                 <div className="col-6">
                                                     <img src="https://via.placeholder.com/380x300" alt="" className="img-fluid"/>
@@ -85,7 +85,6 @@ const NavBar = () => {
                                     <li className="nav-item">
                                         <NavLink to="/category/kids" className="nav-link">Kids</NavLink>
                                     </li>
-                                    {/* <li className="nav-item"><a href="#" className="nav-link">Sale</a></li> */}
                                 </ul>
 
                             </div>

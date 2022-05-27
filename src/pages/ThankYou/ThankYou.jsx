@@ -1,9 +1,13 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import CartContext from "../../store/CartContext"
 
 const ThankYou = () => {
     const cartCtx = useContext(CartContext);
-    cartCtx.setShowHeader(true);
+    
+
+    useEffect(() => {
+      cartCtx.setShowHeader(true);
+    }, [cartCtx])
     
 
   return (

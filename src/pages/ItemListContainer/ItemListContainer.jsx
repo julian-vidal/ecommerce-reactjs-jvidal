@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList/ItemList';
-import {collection, doc, getDocs, query, where} from 'firebase/firestore';
+import {collection, getDocs, query, where} from 'firebase/firestore';
 import db from '../../services/firebase';
 import Spinner from '../../components/Spinner/Spinner';
 import { useContext } from 'react';
@@ -26,7 +26,11 @@ const ItemListContainer = (props) => {
   const heading = categoryId ? categoryId : "Hello World";
   const [load, setLoad] = useState(true);
   const cartCtx = useContext(CartContext);
-  cartCtx.setShowHeader(true);
+  
+
+  useEffect(() => {
+    cartCtx.setShowHeader(true);
+  }, [cartCtx])
 
   useEffect(() => {
     

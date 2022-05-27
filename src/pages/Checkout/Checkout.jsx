@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/CartContext";
 import { Link, useNavigate } from "react-router-dom";
 import LineItem from "./LineItem";
@@ -10,7 +10,12 @@ const Checkout = () => {
 
   
   const cartCtx = useContext(CartContext);
-  cartCtx.setShowHeader(false)
+  
+
+  useEffect(() => {
+    cartCtx.setShowHeader(false)
+  },[cartCtx])
+
   const cartTotal = cartCtx.getCartTotal();
   const navigate = useNavigate();
 

@@ -38,12 +38,24 @@ It's the header of the website, it includes:
 - Account Icon
 - It imports the `CartWidget` component
 
+### Spinner
+This component is a [spiner Bootstrap element](https://getbootstrap.com/docs/5.2/components/spinners/#content) displayed while the content is loaded
+
 ## Pages
 ### ItemDetailContainer
-This component imports the `ItemDetail` component. It receives the product id parameter and displays the detail of the product associated to that product. This is the page linked when a visitor clicks an `Item` component. This component is reloaded when the `id` param is updated.
+This page imports the `ItemDetail` component. It receives the product id parameter and displays the detail of the product associated to that product. This is the page linked when a visitor clicks an `Item` component. This component is reloaded when the `id` param is updated.
 
 ### ItemListContainer
-This component imports the `ItemList` component to display a list of all products in the home page or the products of a specific category when visiting a product category page. This component is reloaded when the `categoryId` param is updated.
+This page imports the `ItemList` component to display a list of all products in the home page or the products of a specific category when visiting a product category page. This component is reloaded when the `categoryId` param is updated.
+
+### Cart
+This page is the cart view, it imports the `CartSummary` if the there are products in the cart or the `EmptyCart` component if there are no products in the cart.
+
+### Checkout
+This page contains a fake checkout form and imports the `LineItem` component to show the cart summary. The form stores the order information in the *orders* collection in Firebase.
+
+### ThankYou
+It's the thank you page after the checkout form is submitted, it displays the order ID stored in Firebase.
 
 ---
 
